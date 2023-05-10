@@ -1,1 +1,2 @@
 # WebTechnologiesPortfolio
+In this project I will use bootstrap framework  to make a responsive website that will describe me and my hometown. It will have a login system , an about page ,a my hometown page that will have a slider , an  our heritage page that will describe my hometowns cultural riches, a my intersts page that will get data from an api service and use it in the page , a contact us form page ; we will check if the form elements are empty / appropirate with javascript. Fınally I will host this project on a free hosting service.
