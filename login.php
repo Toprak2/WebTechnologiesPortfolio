@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <title>Document</title>
 </head>
-<body style>
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+<body>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container-fluid">
       <!-- Links -->
       <ul class="navbar-nav">
@@ -53,5 +54,25 @@
 
 
     </div>
+
+
+<?php
+function test_input($data){
+    $data = trim($data);
+    $data=stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+$username=test_input($_POST["username"]);
+$password=test_input($_POST["password"]);
+if ($username=="b221210053" && $password=="123456") {
+    # code...
+    header("Location: ./index.html");
+}else{
+    echo("wrong password or username");
+}
+?>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
+</html> 
