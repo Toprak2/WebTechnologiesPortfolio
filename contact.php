@@ -55,11 +55,22 @@
         <p><span class="fw-bold">Email Adresiniz:</span> <?php echo($email) ?></p>
         <p><span class="fw-bold">Adı:</span> <?php echo($name) ?></p>
         <p><span class="fw-bold">Soyadı:</span> <?php echo($surname) ?></p>
-        <p><span class="fw-bold">Cinsiyet:</span> <?php echo($gender) ?></p>
+        <p><span class="fw-bold">Cinsiyet:</span> 
+        <?php
+        if($gender=="1"){
+          echo("Erkek");
+        }
+        else if($gender=="2"){
+          echo("Kadın");
+        }
+        else{
+          echo("Belirtmek istemiyor/Diğer");
+        }
+         ?></p>
         <p><span class="fw-bold">Puan:</span> <?php echo($range) ?></p>
         <p><span class="fw-bold">Beğendi/Beğenmedi:</span> <?php echo($like) ?></p>
         <p><span class="fw-bold">Neden beğendi/beğenmedi? Nasıl geliştirilebilir?:</span> <?php echo($opinion) ?></p>
-        <button class="btn btn-primary">Anasayfa</button>
+        <a href="./index.html">Anasayfa</a> 
       </div>
       
     </div>
