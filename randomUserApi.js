@@ -19,10 +19,11 @@ async function getUser(divName,divEmail,divImage,divAge,divPhone,divLocation){
     divName.innerText=fullname;
     divEmail.innerText=email;
     let img = document.createElement("img");
-    let img_div = divImage;
+    
+    
     img.src=image;
     img.classList.add("img-fluid");
-    img_div.append(img);
+    divImage.replaceChild(img,divImage.childNodes[0]);
 }
 userImage = document.getElementsByClassName("userImage");
 userName = document.getElementsByClassName("userName");
@@ -36,3 +37,9 @@ userLocation = document.getElementsByClassName("userLocation");
 for(let i=0;i<3;i++){
     getUser(userName[i],userMail[i],userImage[i],userAge[i],userPhone[i],userLocation[i]);
 }
+
+let intervalId = window.setInterval(function(){
+    for(let i=0;i<3;i++){
+        getUser(userName[i],userMail[i],userImage[i],userAge[i],userPhone[i],userLocation[i]);
+    }
+},10000);
